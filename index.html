@@ -25,7 +25,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <!--
-    - google map
+    - map
   -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 </head>
@@ -540,7 +540,7 @@
 
         <section class="timeline">
           <div class="title-wrapper">
-            <div class="icon-box"><ion-icon name="school-outline"></ion-icon>ion-icon></div>
+            <div class="icon-box"><ion-icon name="school-outline"></ion-icon></div>
             <h3 class="h3">Education</h3>
           </div>
 
@@ -808,10 +808,8 @@
           <h2 class="h2 article-title">Contact</h2>
         </header>
         <section class="mapbox" data-mapbox>
-          <figure>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
-              width="400" height="300" loading="lazy"></iframe>
+          <figure style="width:100%;max-width:900px;margin:0">
+            <div id="map" style="height:380px;border-radius:12px;overflow:hidden;"></div>
           </figure>
         </section>
         <section class="contact-form">
@@ -838,7 +836,60 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+  
+  <!-- Leaflet JS -->
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin="">
+  </script>
+  
+  <script>
+    function initMapOnce() {
+      if (window.__leafletMap) return window.__leafletMap;
+  
+      const sa = [29.4241, -98.4936]; // San Antonio
+      const m = L.map('map', { scrollWheelZoom: false }).setView(sa, 12);
+  
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; OpenStreetMap contributors'
+      }).addTo(m);
+  
+      L.marker(sa).addTo(m).bindPopup('San Antonio, TX').openPopup();
+  
+      window.__leafletMap = m;
+      return m;
+    }
+  
+    // When navbar link is clicked, check if Contact tab got activated
+    document.querySelectorAll('[data-nav-link]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        setTimeout(() => {
+          const contactShown = document.querySelector('.contact.active');
+          if (contactShown) {
+            const map = initMapOnce();
+            setTimeout(() => map.invalidateSize(), 50);
+          }
+        }, 0);
+      });
+    });
+  
+    // Init immediately if Contact is active on first load
+    window.addEventListener('load', () => {
+      const contactShown = document.querySelector('.contact.active');
+      if (contactShown) {
+        const map = initMapOnce();
+        setTimeout(() => map.invalidateSize(), 50);
+      }
+    });
+  
+    // Keep responsive
+    window.addEventListener('resize', () => {
+      if (window.__leafletMap) window.__leafletMap.invalidateSize();
+    });
+  </script>
+  
 </body>
 
 </html>
