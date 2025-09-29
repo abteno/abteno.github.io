@@ -151,68 +151,136 @@
         <ul class="navbar-list">
 
           <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
+            <button class="navbar-link active" data-nav-link data-target="about">About</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
+            <button class="navbar-link" data-nav-link data-target="resume">Resume</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
+            <button class="navbar-link" data-nav-link data-target="awards/recognitions">Awards/Recognitions</button>
           </li>
 
         </ul>
 
       </nav>
 
-
-
-
-
       <!--
         - #ABOUT
       -->
 
-      <article class="about  active" data-page="about">
-
+      <article class="about active" data-page="about">
         <header>
           <h2 class="h2 article-title">About me</h2>
         </header>
-
         <section class="about-text">
           <p>
-            I’m Abram Tenorio, an undergraduate student at the University of Texas at San Antonio pursuing a 
-            Bachelor of Science in Electrical & Computer Engineering. My academic path blends 
-            <strong>technical expertise</strong> in SCADA systems, automation, and data engineering with a 
-            strong focus on <strong>leadership, mentorship, and service</strong>.
-          </p>
-
-          <p>
-            Currently interning with CPS Energy and Atwell, LLC, I build automation tools in Python,
-            work with SCADA/EMS displays during a SIEMENS-to-OSI transition, and contribute to 
-            cross-functional energy projects. I aim to bridge <strong>technical expertise</strong> in SCADA systems, automation and engineering with a 
-            strong focus on <strong>leadership, mentorship, and service</strong>.
+            I'm Abram Tenorio, an undergraduate at the University of Texas at San Antonio pursuing B.S. degrees in
+            <strong>Electrical & Computer Engineering</strong>. I focus on SCADA/EMS, data automation, and power systems—
+            with a strong emphasis on leadership, mentorship, and service.
           </p>
         </section>
 
+        <section class="service">
+          <h3 class="h3 service-title">What I'm Doing Now</h3>
+          <ul class="service-list">
+            <li class="service-item">
+              <div class="service-icon-box"><img src="./assets/images/icon-dev.svg" alt="" width="40"></div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">EMS/SCADA — CPS Energy</h4>
+                <p class="service-item-text">
+                  Supporting Siemens → OSI AspenTech display work and substation point-to-point checks; assisting with
+                  troubleshooting and display design in a utility context.
+                </p>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-icon-box"><img src="./assets/images/icon-design.svg" alt="" width="40"></div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Automation — Atwell, LLC</h4>
+                <p class="service-item-text">
+                  Building Python tools to consolidate/format weekly Excel sheets and improve reporting speed and accuracy
+                  across Power & Energy teams.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="service">
+          <h3 class="h3 service-title">Goals — Next 2–3 Semesters</h3>
+          <ul class="service-list">
+            <li class="service-item">
+              <div class="service-icon-box"><img src="./assets/images/icon-app.svg" alt="" width="40"></div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Academics & Technical Depth</h4>
+                <p class="service-item-text">
+                  Strengthen circuits, signals/systems, and controls; build a senior-design-ready portfolio of utilities-relevant work.
+                </p>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-icon-box"><img src="./assets/images/icon-photo.svg" alt="" width="40"></div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Professional Milestones</h4>
+                <p class="service-item-text">
+                  Secure power systems / SCADA internships; prepare roadmap toward the FE exam and early utility certifications.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="service">
+          <h3 class="h3 service-title">Beyond Graduation</h3>
+          <ul class="service-list">
+            <li class="service-item">
+              <div class="service-icon-box"><img src="./assets/images/icon-dev.svg" alt="" width="40"></div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Career Path</h4>
+                <p class="service-item-text">
+                  Engineer in SCADA/ADMS and distribution systems; progress toward PE licensure and leadership roles in the energy sector.
+                </p>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-icon-box"><img src="./assets/images/icon-design.svg" alt="" width="40"></div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Leadership & Advanced Study</h4>
+                <p class="service-item-text">
+                  Continue leadership development; consider an MBA after several years of engineering experience to drive grid-modernization impact.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Lightweight contact row inside About (since we removed Contact page) -->
+        <section class="service">
+          <h3 class="h3 service-title">Connect</h3>
+          <ul class="service-list">
+            <li class="service-item">
+              <div class="service-icon-box"><img src="./assets/images/icon-app.svg" alt="" width="40"></div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">
+                  <a href="mailto:ab.teno14@yahoo.com">ab.teno14@yahoo.com</a> ·
+                  <a href="https://linkedin.com/in/Abram-Tenorio" target="_blank" rel="noopener">LinkedIn</a>
+                </h4>
+                <p class="service-item-text">San Antonio, TX · (847) 641-7787</p>
+              </div>
+            </li>
+          </ul>
+        </section>
 
         <!--
           - service
         -->
 
         <section class="service">
-
           <h3 class="h3 service-title">What i'm doing</h3>
-
           <ul class="service-list">
-
             <li class="service-item">
-
               <div class="service-icon-box">
                 <img src="./assets/images/icon-design.svg
                 " alt="design icon" width="40">
@@ -225,18 +293,15 @@
                   The most modern and high-quality design made at a professional level.
                 </p>
               </div>
-
             </li>
 
             <li class="service-item">
-
               <div class="service-icon-box">
                 <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
               </div>
 
               <div class="service-content-box">
                 <h4 class="h4 service-item-title">Web development</h4>
-
                 <p class="service-item-text">
                   High-quality development of sites at the professional level.
                 </p>
@@ -380,243 +445,62 @@
         - #PORTFOLIO
       -->
 
-      <article class="portfolio" data-page="portfolio">
+      <article class="portfolio" data-page="awards/recognitions">
         <header>
-          <h2 class="h2 article-title">Projects</h2>
+          <h2 class="h2 article-title">Awards & Recognitions</h2>
         </header>
 
         <section class="projects">
           <ul class="project-list">
-            <li class="project-item active" data-filter-item data-category="automation">
-              <h3 class="project-title">Invoicing Automation</h3>
-              <p class="project-category">
-                Built Python scripts to generate and format weekly billing sheets, 
-                reducing manual reporting time by over 80% and improving accuracy.
-              </p>
+            <li class="project-item active" data-filter-item>
+              <h3 class="project-title">UTSA Distinguished Transfer Scholar</h3>
+              <p class="project-category">University of Texas at San Antonio</p>
             </li>
 
-            <li class="project-item active" data-filter-item data-category="systems">
-              <h3 class="project-title">Communication Alert System</h3>
-              <p class="project-category">
-                Designed a Tableau + SQL-based alert system to notify users of outages 
-                in real time, minimizing delays in critical communications.
-              </p>
-            </li>
-          </ul>
-        </section>
-      </article>
-
-      <!--
-        - #BLOG
-      -->
-
-      <article class="blog" data-page="blog">
-
-        <header>
-          <h2 class="h2 article-title">Blog</h2>
-        </header>
-
-        <section class="blog-posts">
-
-          <ul class="blog-posts-list">
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
-
-                  <p class="blog-text">
-                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
-                  </p>
-
-                </div>
-
-              </a>
+            <li class="project-item active" data-filter-item>
+              <h3 class="project-title">AlamoPROMISE Student of the Year (2023–2024)</h3>
+              <p class="project-category">St. Philip’s College</p>
             </li>
 
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
-
-                  <p class="blog-text">
-                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
-                  </p>
-
-                </div>
-
-              </a>
+            <li class="project-item active" data-filter-item>
+              <h3 class="project-title">AlamoPROMISE Scholar of the Month (Mar 2024)</h3>
+              <p class="project-category">St. Philip’s College</p>
             </li>
 
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #80</h3>
-
-                  <p class="blog-text">
-                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
-                  </p>
-
-                </div>
-
-              </a>
+            <li class="project-item active" data-filter-item>
+              <h3 class="project-title">MOSAICO Scholar of the Semester (Fall 2024)</h3>
+              <p class="project-category">MOSAICO Program</p>
             </li>
 
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
-
-                  <p class="blog-text">
-                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
-                  </p>
-
-                </div>
-
-              </a>
+            <li class="project-item active" data-filter-item>
+              <h3 class="project-title">MOSAICO Scholar of the Year (2025)</h3>
+              <p class="project-category">MOSAICO Program</p>
             </li>
 
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
-
-                  <p class="blog-text">
-                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
-
-                </div>
-
-              </a>
+            <li class="project-item active" data-filter-item>
+              <h3 class="project-title">SPC Presidential Scholarship (Selected Student)</h3>
+              <p class="project-category">St. Philip’s College</p>
             </li>
 
-            <li class="blog-post-item">
-              <a href="#">
+            <li class="project-item active" data-filter-item>
+              <h3 class="project-title">Dean’s List (Spring 2024)</h3>
+              <p class="project-category">San Antonio College</p>
+            </li>
 
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
-                </figure>
+            <li class="project-item active" data-filter-item>
+              <h3 class="project-title">Representative – SAAHJ Community Service Award</h3>
+              <p class="project-category">AlamoPROMISE</p>
+            </li>
 
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #79</h3>
-
-                  <p class="blog-text">
-                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
-                  </p>
-
-                </div>
-
-              </a>
+            <li class="project-item active" data-filter-item>
+              <h3 class="project-title">Student Leadership Institute</h3>
+              <p class="project-category">Level 1 & Level 2 Certifications</p>
             </li>
           </ul>
-        </section>
-      </article>
-
-      <!--
-        - #CONTACT
-      -->
-
-      <article class="contact" data-page="contact">
-        <header>
-          <h2 class="h2 article-title">Contact</h2>
-        </header>
-        <section class="mapbox" data-mapbox>
-          <figure style="width:100%;max-width:900px;margin:0">
-            <div id="map" style="height:380px;border-radius:12px;overflow:hidden;"></div>
-          </figure>
-        </section>
-        <section class="contact-form">
-          <p>Email: <a href="mailto:ab.teno14@yahoo.com">ab.teno14@yahoo.com</a></p>
-          <p>Phone: (847) 641-7787</p>
-          <p>LinkedIn: <a href="https://linkedin.com/in/Abram-Tenorio" target="_blank">linkedin.com/in/Abram-Tenorio</a></p>
         </section>
       </article>
     </div>
   </main>
-
-
-
-
-
 
   <!--
     - custom js link
@@ -637,88 +521,27 @@
   </script>
   
   <script>
-    function initMapOnce() {
-      if (window.__leafletMap) return window.__leafletMap;
-  
-      const sa = [29.4241, -98.4936]; // San Antonio
-      const m = L.map('map', { scrollWheelZoom: false }).setView(sa, 12);
-  
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-        attribution: '&copy; OpenStreetMap contributors'
-      }).addTo(m);
-  
-      L.marker(sa).addTo(m).bindPopup('San Antonio, TX').openPopup();
-  
-      window.__leafletMap = m;
-      return m;
-    }
-  
-    // When navbar link is clicked, check if Contact tab got activated
-    document.querySelectorAll('[data-nav-link]').forEach(btn => {
-      btn.addEventListener('click', () => {
-        setTimeout(() => {
-          const contactShown = document.querySelector('.contact.active');
-          if (contactShown) {
-            const map = initMapOnce();
-            setTimeout(() => map.invalidateSize(), 50);
-          }
-        }, 0);
-      });
-    });
-  
-    // Init immediately if Contact is active on first load
-    window.addEventListener('load', () => {
-      const contactShown = document.querySelector('.contact.active');
-      if (contactShown) {
-        const map = initMapOnce();
-        setTimeout(() => map.invalidateSize(), 50);
-      }
-    });
-  
-    // Keep responsive
-    window.addEventListener('resize', () => {
-      if (window.__leafletMap) window.__leafletMap.invalidateSize();
-    });
-  </script>
-  
-  <script>
-  // --- NAVBAR OVERRIDE: robust tab switching by button text ---
-  (function () {
-    const navButtons = Array.from(document.querySelectorAll('.navbar-link[data-nav-link]'));
-    const pages      = Array.from(document.querySelectorAll('article[data-page]'));
+  (function(){
+    const navButtons = [...document.querySelectorAll('.navbar-link[data-nav-link]')];
+    const pages = [...document.querySelectorAll('article[data-page]')];
 
-    function showPage(target) {
-      // 1) toggle page visibility
+    function showPage(target){
       pages.forEach(p => p.classList.toggle('active', p.dataset.page === target));
-      // 2) toggle active tab
-      navButtons.forEach(b => b.classList.toggle('active', b.textContent.trim().toLowerCase() === target));
-
-      // 3) if Contact page, init/resize the Leaflet map
-      if (target === 'contact') {
-        const map = (typeof initMapOnce === 'function') ? initMapOnce() : null;
-        if (map) setTimeout(() => map.invalidateSize(), 50);
-      }
+      navButtons.forEach(b => b.classList.toggle('active', (b.dataset.target || b.textContent.trim().toLowerCase()) === target));
     }
 
-    // attach handlers
     navButtons.forEach(btn => {
       btn.addEventListener('click', (e) => {
         e.preventDefault();
-        const target = btn.textContent.trim().toLowerCase();
+        const target = btn.dataset.target || btn.textContent.trim().toLowerCase();
         showPage(target);
       });
     });
 
-    // ensure the first visible article has its tab highlighted on load
-    const activeArticle = document.querySelector('article[data-page].active');
-    if (activeArticle) {
-      showPage(activeArticle.dataset.page);
-    } else if (pages.length) {
-      showPage(pages[0].dataset.page);
-    }
-  }());
-</script>
+    const active = document.querySelector('article[data-page].active');
+    showPage(active ? active.dataset.page : (pages[0] && pages[0].dataset.page));
+  })();
+  </script>
 
 </body>
 
