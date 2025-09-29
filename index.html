@@ -682,6 +682,44 @@
     });
   </script>
   
+  <script>
+  // --- NAVBAR OVERRIDE: robust tab switching by button text ---
+  (function () {
+    const navButtons = Array.from(document.querySelectorAll('.navbar-link[data-nav-link]'));
+    const pages      = Array.from(document.querySelectorAll('article[data-page]'));
+
+    function showPage(target) {
+      // 1) toggle page visibility
+      pages.forEach(p => p.classList.toggle('active', p.dataset.page === target));
+      // 2) toggle active tab
+      navButtons.forEach(b => b.classList.toggle('active', b.textContent.trim().toLowerCase() === target));
+
+      // 3) if Contact page, init/resize the Leaflet map
+      if (target === 'contact') {
+        const map = (typeof initMapOnce === 'function') ? initMapOnce() : null;
+        if (map) setTimeout(() => map.invalidateSize(), 50);
+      }
+    }
+
+    // attach handlers
+    navButtons.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = btn.textContent.trim().toLowerCase();
+        showPage(target);
+      });
+    });
+
+    // ensure the first visible article has its tab highlighted on load
+    const activeArticle = document.querySelector('article[data-page].active');
+    if (activeArticle) {
+      showPage(activeArticle.dataset.page);
+    } else if (pages.length) {
+      showPage(pages[0].dataset.page);
+    }
+  }());
+</script>
+
 </body>
 
 </html>
