@@ -1879,4 +1879,36 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .timeline-text { max-width: 700px; }
 
+  /* --- Connect row tidy-up --- */
+.connect .service-item-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.connect .link-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;             /* space between Email and LinkedIn */
+  flex-wrap: wrap;
+}
+
+.connect a {
+  color: var(--light-gray);          /* match theme; adjust if needed */
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.connect a:hover {
+  color: var(--orange-yellow-crayola);  /* theme accent */
+  border-bottom-color: var(--orange-yellow-crayola);
+}
+
+.connect .service-item-text {
+  margin-top: 6px;
+  color: var(--light-gray);
+}
+
 }

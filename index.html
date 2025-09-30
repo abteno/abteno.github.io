@@ -242,15 +242,20 @@
         </section>
 
         <!-- Lightweight contact row inside About (since we removed Contact page) -->
-        <section class="service">
+        <section class="service connect">
           <h3 class="h3 service-title">Connect</h3>
           <ul class="service-list">
             <li class="service-item">
-              <div class="service-icon-box"><img src="./assets/images/icon-app.svg" alt="" width="40"></div>
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-app.svg" alt="" width="40">
+              </div>
               <div class="service-content-box">
                 <h4 class="h4 service-item-title">
-                  <a href="mailto:ab.teno14@yahoo.com">ab.teno14@yahoo.com</a>
-                  <a href="https://linkedin.com/in/Abram-Tenorio" target="_blank" rel="noopener">LinkedIn</a>
+                  <span class="link-row">
+                    <a href="mailto:ab.teno14@yahoo.com">ab.teno14@yahoo.com</a>
+                    <span>•</span>
+                    <a href="https://linkedin.com/in/Abram-Tenorio" target="_blank" rel="noopener">LinkedIn</a>
+                  </span>
                 </h4>
                 <p class="service-item-text">San Antonio, TX · (847) 641-7787</p>
               </div>
@@ -416,36 +421,6 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  
-  <!-- Leaflet JS -->
-  <script
-    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-    crossorigin="">
-  </script>
-  
-  <script>
-  (function(){
-    const navButtons = [...document.querySelectorAll('.navbar-link[data-nav-link]')];
-    const pages = [...document.querySelectorAll('article[data-page]')];
-
-    function showPage(target){
-      pages.forEach(p => p.classList.toggle('active', p.dataset.page === target));
-      navButtons.forEach(b => b.classList.toggle('active', (b.dataset.target || b.textContent.trim().toLowerCase()) === target));
-    }
-
-    navButtons.forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const target = btn.dataset.target || btn.textContent.trim().toLowerCase();
-        showPage(target);
-      });
-    });
-
-    const active = document.querySelector('article[data-page].active');
-    showPage(active ? active.dataset.page : (pages[0] && pages[0].dataset.page));
-  })();
-  </script>
 
 </body>
 
