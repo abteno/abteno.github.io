@@ -471,6 +471,46 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
+
+  <!-- Nav Bar-->
+
+  <script>
+  // Robust tab controller
+    (function () {
+      const buttons = Array.from(document.querySelectorAll('.navbar-link[data-nav-link]'));
+      const pages = Array.from(document.querySelectorAll('article[data-page]'));
+      const pageMap = {};
+      pages.forEach(p => pageMap[p.dataset.page] = p);
+
+      function show(page) {
+        // default to 'about' if target missing
+        if (!pageMap[page]) page = 'about';
+
+        // toggle page visibility
+        pages.forEach(p => p.classList.toggle('active', p === pageMap[page]));
+
+        // toggle active tab
+        buttons.forEach(b => {
+          const target = (b.dataset.target || b.textContent.trim().toLowerCase());
+          b.classList.toggle('active', target === page);
+        });
+      }
+
+      // hook up clicks
+      buttons.forEach(b => {
+        b.addEventListener('click', (e) => {
+          e.preventDefault();
+          const target = (b.dataset.target || b.textContent.trim().toLowerCase());
+          show(target);
+        });
+      });
+
+      // ensure only one article is active at start
+      const initial = document.querySelector('article[data-page].active');
+      show(initial ? initial.dataset.page : 'about');
+    }());
+  </script>
+
 </body>
 
 </html>
