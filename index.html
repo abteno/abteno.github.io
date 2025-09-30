@@ -17,6 +17,39 @@
   -->
   <link rel="stylesheet" href="./assets/css/style.css">
 
+  <!-- 
+    - cleaning up css link
+  -->
+
+  <style>
+  /* Connect card tidy + theme-consistent links */
+  .service.connect .service-item-title { 
+    display:flex; align-items:center; line-height:1.2; font-weight:600; 
+    text-transform:none;  /* stop heading capitalization */
+  }
+  .service.connect .link-row{
+    display:inline-flex; align-items:center; gap:14px; flex-wrap:wrap;
+  }
+  .service.connect a,
+  .service.connect a:visited{
+    color: var(--white-2);      /* use your theme color */
+    text-decoration: none;
+    text-transform: none;       /* ensure no weird caps */
+    border-bottom: 1px solid transparent;
+  }
+  .service.connect a:hover{
+    color: var(--orange-yellow-crayola);           /* theme accent */
+    border-bottom-color: var(--orange-yellow-crayola);
+  }
+  .service.connect .service-item-text{
+    margin-top:6px; color: var(--light-gray);
+  }
+  .service.connect .link-row .dot{
+    opacity:.5; user-select:none;
+  }
+</style>
+
+
   <!--
     - google font link
   -->
@@ -253,7 +286,7 @@
                 <h4 class="h4 service-item-title">
                   <span class="link-row">
                     <a href="mailto:ab.teno14@yahoo.com">ab.teno14@yahoo.com</a>
-                    <span>•</span>
+                    <span class="dot">•</span>
                     <a href="https://linkedin.com/in/Abram-Tenorio" target="_blank" rel="noopener">LinkedIn</a>
                   </span>
                 </h4>
