@@ -275,22 +275,36 @@
         </section>
 
         <!-- Lightweight contact row inside About (since we removed Contact page) -->
-        <section class="service connect">
+        <section class="service">
           <h3 class="h3 service-title">Connect</h3>
           <ul class="service-list">
             <li class="service-item">
               <div class="service-icon-box">
                 <img src="./assets/images/icon-app.svg" alt="" width="40">
               </div>
+
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">
-                  <span class="link-row">
-                    <a href="mailto:ab.teno14@yahoo.com">ab.teno14@yahoo.com</a>
-                    <span class="dot">•</span>
-                    <a href="https://linkedin.com/in/Abram-Tenorio" target="_blank" rel="noopener">LinkedIn</a>
-                  </span>
-                </h4>
-                <p class="service-item-text">San Antonio, TX · (847) 641-7787</p>
+                <!-- Row of nice-looking pills (inline-styled so the theme can't override) -->
+                <div style="
+                  display:flex; gap:12px; flex-wrap:wrap; align-items:center;
+                  font-weight:600; line-height:1.2; text-transform:none;
+                ">
+                  <a href="mailto:ab.teno14@yahoo.com" style="
+                    display:inline-block; padding:8px 12px; border-radius:10px;
+                    background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.12);
+                    color:#eaeaea; text-decoration:none;
+                  ">ab.teno14@yahoo.com</a>
+
+                  <a href="https://linkedin.com/in/Abram-Tenorio" target="_blank" rel="noopener" style="
+                    display:inline-block; padding:8px 12px; border-radius:10px;
+                    background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.12);
+                    color:#eaeaea; text-decoration:none;
+                  ">LinkedIn</a>
+                </div>
+
+                <p class="service-item-text" style="margin-top:8px; color:#b6b6b6;">
+                  San Antonio, TX · (847) 641-7787
+                </p>
               </div>
             </li>
           </ul>
