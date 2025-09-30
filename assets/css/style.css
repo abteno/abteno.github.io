@@ -1911,4 +1911,17 @@ textarea.form-input::-webkit-resizer { display: none; }
     color: var(--light-gray);
   }
 
+  .btn-link {
+    display:inline-block;
+    padding:6px 10px;
+    border-radius:10px;
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.12);
+    color:#eaeaea;
+    text-decoration:none;
+    font-weight:600;
+  }
+  .btn-link:hover { border-color: var(--orange-yellow-crayola); color: #fff; }
+
+
 }
