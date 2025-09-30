@@ -1857,7 +1857,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-  }f
+  }
 
   .contact-info :is(.contact-link, time, address) {
     --fs-7: 14px;
