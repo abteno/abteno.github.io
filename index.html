@@ -47,8 +47,7 @@
   .service.connect .link-row .dot{
     opacity:.5; user-select:none;
   }
-</style>
-
+  </style>
 
   <!--
     - google font link
@@ -480,105 +479,110 @@
           <h2 class="h2 article-title">Honors & Leadership</h2>
         </header>
 
-        <!-- ===== HERO GALLERY: your biggest items with images/screenshots ===== -->
-        <section style="margin-top:10px">
-          <h3 class="h3" style="margin:0 0 10px">Highlights</h3>
-          <div class="honors-heroes">
+        <!-- Scroll progress bar for this page -->
+        <div class="honors-progress"><span id="honorsProgressBar"></span></div>
 
-            <!-- Hero 1: AlamoPROMISE Student of the Year -->
-            <div class="honor-card">
-              <img class="honor-media" src="assets/honors/alamopromise-student-of-the-year-2023.jpg"
-                  alt="AlamoPROMISE Student of the Year">
-              <div class="honor-meta">
-                <h4 class="honor-title">AlamoPROMISE Student of the Year (2023–24)</h4>
-                <p class="honor-sub">St. Philip’s College</p>
-              </div>
-              <!-- Optional footer link; add when ready -->
-              <!-- <div class="honor-footer">
-                <a class="btn-ghost" href="https://..." target="_blank" rel="noopener">Read article</a>
-              </div> -->
-            </div>
+        <section style="position:relative">
+          <div class="honors-rail" aria-hidden="true"></div>
+          <ol class="honors-list">
 
-            <!-- Hero 2: SPC Student of the Year -->
-            <div class="honor-card">
-              <img class="honor-media" src="assets/honors/spc-student-of-the-year-2024.jpg"
-                  alt="SPC Student of the Year 2024">
-              <div class="honor-meta">
-                <h4 class="honor-title">SPC Student of the Year (2024)</h4>
-                <p class="honor-sub">St. Philip’s College</p>
-              </div>
-            </div>
+            <!-- Most recent first -->
 
-            <!-- Hero 3: Presidential Scholarship -->
-            <div class="honor-card">
-              <img class="honor-media" src="assets/honors/presidential-scholarship-award.jpg"
-                  alt="Presidential Scholarship Award">
-              <div class="honor-meta">
-                <h4 class="honor-title">Presidential Scholarship (Selected)</h4>
-                <p class="honor-sub">St. Philip’s College</p>
-              </div>
-            </div>
-
-            <!-- Hero 4: Scholar of the Month (use front-page screenshot) -->
-            <div class="honor-card">
-              <img class="honor-media" src="assets/honors/student-of-the-month-2024-front-page.jpg"
-                  alt="Scholar of the Month feature">
-              <div class="honor-meta">
-                <h4 class="honor-title">AlamoPROMISE Scholar of the Month (Mar 2024)</h4>
-                <p class="honor-sub">St. Philip’s College</p>
-              </div>
-            </div>
-
-          </div>
-        </section>
-
-        <!-- ===== TIMELINE LIST: the rest, clean text-only ===== -->
-        <section class="timeline honors-timeline" style="margin-top:18px">
-          <div class="title-wrapper">
-            <div class="icon-box"><ion-icon name="ribbon-outline"></ion-icon></div>
-            <h3 class="h3">Additional Honors</h3>
-          </div>
-
-          <ol class="timeline-list">
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Distinguished Transfer Scholar</h4>
-              <span>University of Texas at San Antonio</span>
-            </li>
-
-            <!-- Dean's List as inline PDF viewer (no text underneath) -->
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Dean’s List (Spring 2024)</h4>
-              <span>San Antonio College</span>
-              <div style="margin-top:10px;border:1px solid rgba(255,255,255,.12);border-radius:12px;overflow:hidden;">
-                <iframe src="assets/honors/deans-list-s24.pdf#view=FitH" title="Dean’s List Certificate"
-                        style="width:100%;height:420px;border:0;background:#1a1a1a"></iframe>
+            <!-- 2025 -->
+            <li class="honor-item">
+              <span class="honor-year">2025</span>
+              <div class="honor-card">
+                <div class="honor-head">
+                  <h3 class="honor-title">MOSAICO Scholar of the Year</h3>
+                  <p class="honor-sub">MOSAICO Program</p>
+                  <p class="honor-date">2025</p>
+                </div>
+                <!-- add an image or PDF later if you have it -->
               </div>
             </li>
 
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">MOSAICO Scholar of the Year (2025)</h4>
-              <span>MOSAICO Program</span>
-            </li>
-
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">MOSAICO Scholar of the Semester (Fall 2024)</h4>
-              <span>Alamo Colleges District</span>
-            </li>
-
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Representative — SAAHJ Community Service Award</h4>
-              <span>AlamoPROMISE</span>
-            </li>
-
-            <!-- Optional: add two accent photos in the timeline (nice visual variety) -->
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Commencement & Features</h4>
-              <span>Media</span>
-              <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-top:10px">
-                <img src="assets/honors/liz-graduation.jpg" alt="Graduation" style="width:100%;border-radius:10px;object-fit:cover">
-                <img src="assets/honors/lunch-w-mayor-and-chancellor.jpg" alt="Lunch with Mayor and Chancellor" style="width:100%;border-radius:10px;object-fit:cover">
+            <!-- 2024 -->
+            <li class="honor-item">
+              <span class="honor-year">2024</span>
+              <div class="honor-card">
+                <div class="honor-head">
+                  <h3 class="honor-title">SPC Student of the Year</h3>
+                  <p class="honor-sub">St. Philip’s College</p>
+                  <p class="honor-date">2024</p>
+                </div>
+                <div class="honor-media">
+                  <div class="ratio">
+                    <img src="assets/honors/spc-student-of-the-year-2024.jpg" alt="SPC Student of the Year 2024">
+                  </div>
+                </div>
               </div>
             </li>
+
+            <li class="honor-item">
+              <div class="honor-card">
+                <div class="honor-head">
+                  <h3 class="honor-title">Presidential Scholarship (Selected)</h3>
+                  <p class="honor-sub">St. Philip’s College</p>
+                  <p class="honor-date">2024</p>
+                </div>
+                <div class="honor-media">
+                  <div class="ratio">
+                    <img src="assets/honors/presidential-scholarship-award.jpg" alt="Presidential Scholarship">
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="honor-item">
+              <div class="honor-card">
+                <div class="honor-head">
+                  <h3 class="honor-title">AlamoPROMISE Scholar of the Month</h3>
+                  <p class="honor-sub">St. Philip’s College</p>
+                  <p class="honor-date">Mar 2024</p>
+                </div>
+                <div class="honor-media">
+                  <div class="ratio">
+                    <img src="assets/honors/student-of-the-month-2024-front-page.jpg" alt="Scholar of the Month feature">
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="honor-item">
+              <div class="honor-card">
+                <div class="honor-head">
+                  <h3 class="honor-title">Dean’s List (Spring 2024)</h3>
+                  <p class="honor-sub">San Antonio College</p>
+                  <p class="honor-date">Spring 2024</p>
+                </div>
+                <!-- Inline PDF viewer (fully responsive via aspect-ratio) -->
+                <div class="honor-media">
+                  <div class="ratio">
+                    <iframe src="assets/honors/deans-list-s24.pdf#view=FitH" title="Dean’s List Certificate"></iframe>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- 2023 -->
+            <li class="honor-item">
+              <span class="honor-year">2023</span>
+              <div class="honor-card">
+                <div class="honor-head">
+                  <h3 class="honor-title">AlamoPROMISE Student of the Year</h3>
+                  <p class="honor-sub">St. Philip’s College</p>
+                  <p class="honor-date">2023–24</p>
+                </div>
+                <div class="honor-media">
+                  <div class="ratio">
+                    <img src="assets/honors/alamopromise-student-of-the-year-2023.jpg" alt="AlamoPROMISE Student of the Year">
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- Add more items below as needed, newest → oldest -->
+
           </ol>
         </section>
       </article>
@@ -634,6 +638,36 @@
       const initial = document.querySelector('article[data-page].active');
       show(initial ? initial.dataset.page : 'about');
     }());
+  </script>
+
+  <script>
+  (function () {
+    const honorsArticle = document.querySelector('article[data-page="honors"]');
+    const bar = document.getElementById('honorsProgressBar');
+
+    function updateProgress() {
+      if (!honorsArticle || honorsArticle.classList.contains('active') === false) return;
+      const rect = honorsArticle.getBoundingClientRect();
+      const vh = window.innerHeight || document.documentElement.clientHeight;
+
+      // Amount of the honors article scrolled (0..1)
+      const total = honorsArticle.scrollHeight - vh;
+      const scrolled = Math.min(Math.max(-rect.top, 0), total);
+      const pct = total > 0 ? (scrolled / total) * 100 : 0;
+      if (bar) bar.style.width = pct + '%';
+    }
+
+    // Update on scroll/resize and also when user switches tabs
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    window.addEventListener('resize', updateProgress);
+
+    document.querySelectorAll('.navbar-link[data-nav-link]').forEach(b => {
+      b.addEventListener('click', () => setTimeout(updateProgress, 60));
+    });
+
+    // Initial paint
+    window.addEventListener('load', () => setTimeout(updateProgress, 60));
+  })();
   </script>
 
 </body>

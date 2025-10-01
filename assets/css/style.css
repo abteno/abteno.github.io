@@ -1922,70 +1922,68 @@ textarea.form-input::-webkit-resizer { display: none; }
     font-weight:600;
   }
   .btn-link:hover { border-color: var(--orange-yellow-crayola); color: #fff; }
-  /* === HONORS – Hybrid Showcase === */
-  .honors-heroes {
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
-    gap:18px;
+  /* === Honors Timeline (full page) === */
+  .honors-progress {
+    position: sticky; top: 0; z-index: 20;
+    height: 6px; background: rgba(255,255,255,.08);
+    border-radius: 999px; overflow: hidden; margin: 8px 0 18px;
+  }
+  .honors-progress > span {
+    display: block; height: 100%; width: 0%;
+    background: var(--orange-yellow-crayola);
+    transition: width .08s linear;
   }
 
+  .honors-rail {
+    position: absolute; left: 14px; top: 0; bottom: 0;
+    width: 2px; background: rgba(255,255,255,.12);
+  }
+  .honors-list { position: relative; list-style: none; padding: 0 0 0 42px; margin: 0; }
+  .honor-item { position: relative; margin: 18px 0 28px; }
+  .honor-item::before {
+    content: ""; position: absolute; left: -31px; top: 8px;
+    width: 12px; height: 12px; border-radius: 50%;
+    background: var(--eerie-black-2);
+    border: 2px solid var(--orange-yellow-crayola);
+    box-shadow: 0 0 0 3px rgba(255,255,255,.06);
+  }
+
+  /* Card */
   .honor-card {
-    position:relative;
     background: var(--eerie-black-2);
-    border:1px solid rgba(255,255,255,.12);
-    border-radius:14px;
-    overflow:hidden;
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 14px; overflow: hidden;
     box-shadow: var(--shadow-2);
-    transition: transform .25s ease, box-shadow .25s ease;
+    transition: transform .2s ease, box-shadow .2s ease;
   }
-  .honor-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 14px 28px rgba(0,0,0,.35);
+  .honor-card:hover { transform: translateY(-3px); box-shadow: 0 10px 22px rgba(0,0,0,.35); }
+
+  .honor-head { padding: 14px 16px 10px; }
+  .honor-title { margin: 0; font-size: 1.05rem; font-weight: 700; color: #fff; line-height: 1.2; }
+  .honor-sub   { margin: 6px 0 0; font-size: .92rem; color: var(--light-gray); }
+  .honor-date  { margin: 2px 0 0; font-size: .85rem; color: var(--vegas-gold); }
+
+  /* Media block (images & PDFs) — fully responsive */
+  .honor-media { position: relative; }
+  .honor-media img,
+  .honor-media iframe {
+    display: block; width: 100%; height: auto; border: 0;
+  }
+  .honor-media .ratio {
+    aspect-ratio: 16 / 9;           /* responsive height */
+    width: 100%; overflow: hidden;
+  }
+  .honor-media .ratio > img,
+  .honor-media .ratio > iframe {
+    width: 100%; height: 100%; object-fit: cover; display: block;
   }
 
-  .honor-media {
-    width:100%;
-    aspect-ratio:16/9;
-    object-fit:cover;
-    display:block;
+  /* Year label (optional, simple pill) */
+  .honor-year {
+    display:inline-block; margin: 0 0 8px 0;
+    padding: 4px 10px; border-radius: 999px;
+    background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12);
+    color:#eaeaea; font-weight:600; font-size:.85rem;
   }
-
-  .honor-meta {
-    position:absolute; left:0; right:0; bottom:0;
-    padding:12px 14px;
-    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.55) 55%, rgba(0,0,0,.75) 100%);
-  }
-  .honor-title {
-    margin:0;
-    font-size:1.05rem;
-    color:#fff;
-    line-height:1.2;
-  }
-  .honor-sub {
-    margin:4px 0 0;
-    font-size:.9rem;
-    color: var(--light-gray);
-  }
-
-  .honor-footer {
-    padding:10px 14px 12px;
-    display:flex; gap:8px; flex-wrap:wrap;
-    background: var(--eerie-black-2);
-    border-top:1px solid rgba(255,255,255,.08);
-  }
-
-  .btn-ghost {
-    display:inline-block; padding:8px 12px; border-radius:10px;
-    background:rgba(255,255,255,.06);
-    border:1px solid rgba(255,255,255,.14);
-    color:#eaeaea; text-decoration:none; font-weight:600;
-  }
-  .btn-ghost:hover { border-color: var(--orange-yellow-crayola); color:#fff; }
-
-  /* Timeline list beneath heroes */
-  .honors-timeline .timeline-list { margin-top:10px; }
-  .honors-timeline .timeline-item-title { font-weight:600; }
-
-
 
 }
