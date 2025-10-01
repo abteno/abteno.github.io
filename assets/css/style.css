@@ -1986,4 +1986,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     color:#eaeaea; font-weight:600; font-size:.85rem;
   }
 
+  .honor-media picture { display:block; width:100%; }
+  .honor-media img { width:100%; height:auto; display:block; border:0; }
+
 }
