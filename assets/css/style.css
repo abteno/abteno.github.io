@@ -56,25 +56,18 @@
 
   /* solid */
 
-  /*
-   * Updated colour palette for a lighter, more modern feel.  The base
-   * neutrals are slightly brighter and the accent gold is softened
-   * to improve contrast against the dark backgrounds.  These values
-   * will cascade through the existing styles without requiring
-   * structural changes to the markup.  See honours page for usage.
-   */
-  --jet: hsl(240, 4%, 21%);
-  --onyx: hsl(240, 3%, 19%);
-  --eerie-black-1: hsl(240, 3%, 15%);
-  --eerie-black-2: hsl(240, 3%, 14%);
-  --smoky-black: hsl(240, 3%, 11%);
+  --jet: hsl(0, 0%, 22%);
+  --onyx: hsl(240, 1%, 17%);
+  --eerie-black-1: hsl(240, 2%, 13%);
+  --eerie-black-2: hsl(240, 2%, 12%);
+  --smoky-black: hsl(0, 0%, 7%);
   --white-1: hsl(0, 0%, 100%);
-  --white-2: hsl(0, 0%, 97%);
-  --orange-yellow-crayola: hsl(45, 100%, 65%);
-  --vegas-gold: hsl(45, 60%, 59%);
-  --light-gray: hsl(0, 0%, 86%);
-  --light-gray-70: hsla(0, 0%, 86%, 0.7);
-  --bittersweet-shimmer: hsl(0, 45%, 48%);
+  --white-2: hsl(0, 0%, 98%);
+  --orange-yellow-crayola: hsl(45, 100%, 72%);
+  --vegas-gold: hsl(45, 54%, 58%);
+  --light-gray: hsl(0, 0%, 84%);
+  --light-gray-70: hsla(0, 0%, 84%, 0.7);
+  --bittersweet-shimmer: hsl(0, 43%, 51%);
 
   /**
    * typography
@@ -1929,53 +1922,71 @@ textarea.form-input::-webkit-resizer { display: none; }
     font-weight:600;
   }
   .btn-link:hover { border-color: var(--orange-yellow-crayola); color: #fff; }
-  /* Honors grid */
-  .honors-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 16px;
+  /* === Honors Timeline (full page) === */
+  .honors-progress {
+    position: sticky; top: 0; z-index: 20;
+    height: 6px; background: rgba(255,255,255,.08);
+    border-radius: 999px; overflow: hidden; margin: 8px 0 18px;
   }
+  .honors-progress > span {
+    display: block; height: 100%; width: 0%;
+    background: var(--orange-yellow-crayola);
+    transition: width .08s linear;
+  }
+
+  .honors-rail {
+    position: absolute; left: 14px; top: 0; bottom: 0;
+    width: 2px; background: rgba(255,255,255,.12);
+  }
+  .honors-list { position: relative; list-style: none; padding: 0 0 0 42px; margin: 0; }
+  .honor-item { position: relative; margin: 18px 0 28px; }
+  .honor-item::before {
+    content: ""; position: absolute; left: -31px; top: 8px;
+    width: 12px; height: 12px; border-radius: 50%;
+    background: var(--eerie-black-2);
+    border: 2px solid var(--orange-yellow-crayola);
+    box-shadow: 0 0 0 3px rgba(255,255,255,.06);
+  }
+
+  /* Card */
   .honor-card {
     background: var(--eerie-black-2);
     border: 1px solid rgba(255,255,255,.12);
-    border-radius: 12px;
-    overflow: hidden;
+    border-radius: 14px; overflow: hidden;
+    box-shadow: var(--shadow-2);
+    transition: transform .2s ease, box-shadow .2s ease;
   }
-  .honor-card header {
-    padding: 12px 14px 8px;
-  }
-  .honor-title {
-    margin: 0;
-    font-size: 1rem;
-  }
-  .honor-sub {
-    margin: 4px 0 0;
-    color: var(--light-gray);
-    font-size: .9rem;
-  }
-  .honor-media {
-    display:block;
-    width:100%;
-    aspect-ratio: 16 / 9;      /* modern browsers */
-    object-fit: cover;
-  }
-  .honor-embed {
-    width: 100%;
-    height: 420px;
-    border: 0;
-    display: block;
-  }
-  .honor-footer {
-    padding: 10px 14px 14px;
-    display:flex; gap:8px; flex-wrap:wrap;
-  }
-  .btn-ghost {
-    display:inline-block; padding:8px 12px; border-radius:10px;
-    background: rgba(255,255,255,.06);
-    border: 1px solid rgba(255,255,255,.12);
-    color:#eaeaea; text-decoration:none; font-weight:600;
-  }
-  .btn-ghost:hover { border-color: var(--orange-yellow-crayola); color:#fff; }
+  .honor-card:hover { transform: translateY(-3px); box-shadow: 0 10px 22px rgba(0,0,0,.35); }
 
+  .honor-head { padding: 14px 16px 10px; }
+  .honor-title { margin: 0; font-size: 1.05rem; font-weight: 700; color: #fff; line-height: 1.2; }
+  .honor-sub   { margin: 6px 0 0; font-size: .92rem; color: var(--light-gray); }
+  .honor-date  { margin: 2px 0 0; font-size: .85rem; color: var(--vegas-gold); }
+
+  /* Media block (images & PDFs) — fully responsive */
+  .honor-media { position: relative; }
+  .honor-media img,
+  .honor-media iframe {
+    display: block; width: 100%; height: auto; border: 0;
+  }
+  .honor-media .ratio {
+    aspect-ratio: 16 / 9;           /* responsive height */
+    width: 100%; overflow: hidden;
+  }
+  .honor-media .ratio > img,
+  .honor-media .ratio > iframe {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+  }
+
+  /* Year label (optional, simple pill) */
+  .honor-year {
+    display:inline-block; margin: 0 0 8px 0;
+    padding: 4px 10px; border-radius: 999px;
+    background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12);
+    color:#eaeaea; font-weight:600; font-size:.85rem;
+  }
+
+  .honor-media picture { display:block; width:100%; }
+  .honor-media img { width:100%; height:auto; display:block; border:0; }
 
 }
